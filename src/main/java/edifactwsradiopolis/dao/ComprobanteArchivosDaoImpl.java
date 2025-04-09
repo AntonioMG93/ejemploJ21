@@ -3140,11 +3140,11 @@ returnCancelaCFDIDto.setCode("201");
 			String sello = "";
 			try {
                             //cadena original 4.0 prod
-                            cadenaOriginal = creaCadenaOriginal("/edifactmx_greiner/sstxsd/xslt_xsd/cadenaoriginal_4_0.xslt", xml);
+//                            cadenaOriginal = creaCadenaOriginal("/edifactmx_greiner/sstxsd/xslt_xsd/cadenaoriginal_4_0.xslt", xml);
 //                            cadena original 4.0 160
 //                            cadenaOriginal = creaCadenaOriginal("/edifactmx_radiopolis/sstxsd/xslt_xsd/cadenaoriginal_4_0.xslt", xml);
 //                            // cadena original /local
-//				cadenaOriginal = creaCadenaOriginal(Utils.getParamValue("path_files_xsd_xslt") + File.separator + "cadenaoriginal_4_0.xslt", xml);
+				cadenaOriginal = creaCadenaOriginal(Utils.getParamValue("path_files_xsd_xslt") + File.separator + "cadenaoriginal_4_0.xslt", xml);
 			} catch (Exception e) {
 				System.out.println(e.getLocalizedMessage());
 			}

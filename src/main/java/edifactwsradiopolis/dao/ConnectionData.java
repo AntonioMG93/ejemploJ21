@@ -23,7 +23,7 @@ public class ConnectionData {
             String port=prop.getPropValues("mysql_port");
 //            System.out.println("Datos de conexión: "+user+", "+passw+", "+host+", "+port);
 
-            String shema=prop.getPropValues("mysql_database");;
+            String shema=prop.getPropValues("mysql_database");
 /*		
 //prop=new Propiedades();
             String user="azamudio";
