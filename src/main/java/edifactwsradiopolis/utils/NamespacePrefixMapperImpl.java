@@ -2,9 +2,9 @@ package edifactwsradiopolis.utils;
 
 import java.util.Map;
 
-import com.sun.xml.bind.marshaller.NamespacePrefixMapper;
+import org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
 
-public class NamespacePrefixMapperImpl extends NamespacePrefixMapper {
+public class NamespacePrefixMapperImpl extends org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper {
 	private final Map<String, String> map;
 
 	public NamespacePrefixMapperImpl(Map<String, String> map) {

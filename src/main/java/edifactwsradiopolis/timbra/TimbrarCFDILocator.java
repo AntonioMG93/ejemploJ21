@@ -2,53 +2,24 @@ package edifactwsradiopolis.timbra;
 
 public class TimbrarCFDILocator extends org.apache.axis.client.Service implements TimbrarCFDI {
 		
-    public TimbrarCFDILocator(String ambiente) {        
-    	if(ambiente.equals("produccion"))
+    public TimbrarCFDILocator(String ambiente) {    
+       
+    	if(ambiente.equalsIgnoreCase("produccion"))
         {
             //liga 4.0
             timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI4/timbraCFDI40.php?wsdl";
-        //liga 3.3
-//        timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI/timbraCFDI.php?wsdl";
         }
-        else if(ambiente.equals("busca1"))
+        else if(ambiente.equals("busca1") || ambiente.equals("busca2") || ambiente.equals("busca3") || ambiente.equals("busca4") || ambiente.equals("busca5"))
         {  
 //        	System.out.println("Entro con url para buscar cfdi");
         	//http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
         	timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI4/regresaCFDIU.php?wsdl";
         	//timbrarCFDIPort_address="https://207.21.196.135/service/timbrarCFDI.php?wsdl";
-        }
-        else if(ambiente.equals("busca2"))
-        { //http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
-        	timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI4/regresaCFDIU.php?wsdl";
-        	//timbrarCFDIPort_address="https://207.21.196.136/service/timbrarCFDI.php?wsdl";
-        }
-        else if(ambiente.equals("busca3"))
-        { //http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
-        	timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI4/regresaCFDIU.php?wsdl";
-        	//timbrarCFDIPort_address="https://207.21.196.137/service/timbrarCFDI.php?wsdl";
-        }
-        else if(ambiente.equals("busca4"))
-        { //http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
-        	timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI4/regresaCFDIU.php?wsdl";
-        	//timbrarCFDIPort_address="https://207.21.196.138/service/timbrarCFDI.php?wsdl";
-        }
-        else if(ambiente.equals("busca5"))
-        { //http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
-        	timbrarCFDIPort_address="https://www.edifactmx-pac.com/serviceCFDI/regresaCFDIU.php?wsdl";
-        	//timbrarCFDIPort_address="https://207.21.196.139/service/timbrarCFDI.php?wsdl";
-        }
-        else
+        }else
         {
             //http://comprobantes-fiscales.com/service/timbrarCFDI.php?wsdl
             //4.0
         	timbrarCFDIPort_address="https://comprobantes-fiscales.com/serviceCFDI4/timbraCFDI.php?wsdl";
-        	//3.3
-        	//timbrarCFDIPort_address="http://edifactmex.dyndns-ip.com/service/timbraCFDI.php";
-//        	timbrarCFDIPort_address="http://comprobantes-fiscales.com/service/timbraCFDI.php?wsdl";
-//        	timbrarCFDIPort_address="https://comprobantes-fiscales.com/service/timbraCFDIC.php?wsdl"; //pruebas
-        	
-        	
-        	//timbrarCFDIPort_address="http://comprobantes-fiscales.com/service/timbraCFDIC.php?wsdl"; //SAT pruebas
         }
     }
 
