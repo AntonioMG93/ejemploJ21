@@ -8,13 +8,13 @@
         <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
     <servlet>
-        <servlet-name>ComprobantesWebService</servlet-name>
+        <servlet-name>ExampleService</servlet-name>
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ComprobantesWebService</servlet-name>
-        <url-pattern>/ComprobantesWebService</url-pattern>
+        <servlet-name>ExampleService</servlet-name>
+        <url-pattern>/ExampleService</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
